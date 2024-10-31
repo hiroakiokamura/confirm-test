@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* モーダルのスタイル */
+.modal {
+    display: none;
+}
+
+/* モーダルが表示される時のスタイル */
+.modal:target {
+    @apply flex;
+}
+
+/* モーダルコンテンツのスタイル */
+.modal__content {
+    @apply bg-white rounded-lg p-4 max-w-md max-h-[40rem] w-full shadow-lg relative my-8 text-sm;
+}
+
+/* モーダルの閉じるボタン */
+.modal__close-btn {
+    @apply absolute top-2 right-3 text-3xl text-[#5a4634] hover:text-[#cc4c39] font-bold;
+}
+
+/* モーダル内のテキスト */
+.modal__body p {
+    @apply text-[#8d7358] mb-4;
+}
