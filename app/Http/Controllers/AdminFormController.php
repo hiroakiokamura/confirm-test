@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Contact;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Response;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class AdminFormController extends Controller
@@ -28,7 +27,7 @@ class AdminFormController extends Controller
             $paginate = false;
         }
 
-        return view('/auth/admin/dashboard', compact('contacts', 'categories', 'paginate'));
+        return view('/auth/admin', compact('contacts', 'categories', 'paginate'));
     }
 
     public function searchContact(Request $request)
@@ -72,7 +71,7 @@ class AdminFormController extends Controller
         // カテゴリーを表示するためのデータを渡す
         $categories = Category::all();
 
-        return view('/auth/admin/dashboard', compact('contacts', 'categories', 'paginate'));
+        return view('/auth/admin', compact('contacts', 'categories', 'paginate'));
     }
 
     // 削除処理

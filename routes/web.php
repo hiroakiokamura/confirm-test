@@ -7,25 +7,6 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminFormController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/index', function (){
-//     return view('index');
-// });
-
 Fortify::registerView(function () {
     return view('auth.register');
 });
@@ -43,7 +24,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/auth/admin/dashboard', [AdminFormController::class, 'showAdminForm'])->name('showAdmin');  // 管理ページのビューを返す
+    Route::get('/auth/admin', [AdminFormController::class, 'showAdminForm'])->name('showAdmin');  // 管理ページのビューを返す
     Route::get('/auth/admin/search', [AdminFormController::class, 'searchContact'])->name('searchContact');
 });
 

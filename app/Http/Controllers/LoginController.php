@@ -15,7 +15,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // 認証成功後のリダイレクト
-            return redirect()->intended('/auth/admin/dashboard');
+            return redirect()->intended('/auth/admin');
         }
 
         // 認証失敗時のエラーメッセージ
