@@ -1,15 +1,18 @@
+お問合せフォーム
+
 ## 環境構築
 
 1. `git clone git@github.com:hiroakiokamura/coachtech-test.git`
 2. `composer install`
 3. `php artisan sail install`
-4. DockerDesktop アプリを立ち上げる
-5. `./vendor/bin/sail up -d`
-6. `./vendor/bin/sail artisan key:generate`
-7. `./vendor/bin/sail artisan migrate`
-8. `./vendor/bin/sail artisan db:seed`
-9. `npm install`
-10. `npm run dev`
+4. DockerDesktopを起動
+5. .env.exampleファイルの名前を.envに変更
+6. `./vendor/bin/sail up -d`
+7. `./vendor/bin/sail artisan key:generate`
+8. `./vendor/bin/sail artisan migrate`
+9. `./vendor/bin/sail artisan db:seed`
+10. `npm install`
+11. `npm run dev`
 
 ## 使用技術(実行環境)
 
