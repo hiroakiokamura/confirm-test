@@ -2,7 +2,7 @@
 
 ## 環境構築
 
-1. `git clone git@github.com:hiroakiokamura/coachtech-test.git`
+1. `git clone git@github.com:hiroakiokamura/confirm-test.git`
 2. `composer install`
 3. `php artisan sail install`
 4. DockerDesktopを起動
