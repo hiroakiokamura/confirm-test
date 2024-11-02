@@ -24,7 +24,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/auth/admin', [AdminFormController::class, 'showAdminForm'])->name('showAdmin');  // 管理ページのビューを返す
+    Route::get('/auth/admin', [AdminFormController::class, 'showAdminForm'])->name('showAdmin');
     Route::get('/auth/admin/search', [AdminFormController::class, 'searchContact'])->name('searchContact');
 });
 
