@@ -1,6 +1,6 @@
 ## 環境構築
 
-1. `git clone git@github.com:estra-inc/confirmation-test-contact-form.git`
+1. `git clone git@github.com:hiroakiokamura/coachtech-test.git`
 2. `composer install`
 3. `php artisan sail install`
 4. DockerDesktop アプリを立ち上げる
